@@ -17,7 +17,7 @@ public class Lion {
         this.predator = predator;
     }
 
-    private Predator predator;
+    private final Predator predator;
 
     public int getKittens() {
         return predator.getKittens();

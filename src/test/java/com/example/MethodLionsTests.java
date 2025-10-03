@@ -32,7 +32,7 @@ public class MethodLionsTests {
     }
 
     @Test
-    public void negativeSex() throws Exception {
+    public void negativeSex() {
         assertEquals("Используйте допустимые значения пола животного - самей или самка", assertThrows(Exception.class, () -> new Lion("Другое", predator)).getMessage());
     }
 }
