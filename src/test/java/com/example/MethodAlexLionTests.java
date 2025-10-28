@@ -13,23 +13,23 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class MethodAlexLionTests {
 
     @Mock
-    Predator predator;
+    Feline feline;
 
     @Test
     public void friendsOfAlexLion() throws Exception {
-        AlexLion alex = new AlexLion(predator);
+        AlexLion alex = new AlexLion(feline);
         assertEquals(List.of("Марти","Глория", "Мелман"), alex.getFriends(), "У льва Алекса трое друзей: 'Марти','Глория', 'Мелман'");
     }
 
     @Test
     public void homeOfAlexLion() throws Exception {
-        AlexLion alex = new AlexLion(predator);
+        AlexLion alex = new AlexLion(feline);
         assertEquals("Нью-Йоркский зоопарк", alex.getPlaceOfLiving(), "Дом льва Алекса это - 'Нью-Йоркский зоопарк'");
     }
 
     @Test
     public void alexHasNotKittens() throws Exception {
-        AlexLion alex = new AlexLion(predator);
+        AlexLion alex = new AlexLion(feline);
         assertEquals(0, alex.getKittens(), "У льва Алекса нет львят");
     }
 }
